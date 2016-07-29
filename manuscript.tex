@@ -1,0 +1,105 @@
+\documentclass[]{aiaa-tc}% insert '[draft]' option to show overfull boxes
+
+\usepackage{aiaa_packages}
+
+ \title{Paper Title}
+
+ \author{
+  Shankar Kulumani\thanksibid{1}%
+    \thanks{Doctoral Student, \href{mailto:skulumani@gwu.edu}{skulumani@gwu.edu}. Student AIAA Member.}
+  \ and Taeyoung Lee\thanksibid{2}\thanks{Associate Professor, \href{mailto:tylee@gwu.edu}{tylee@gwu.edu}. AIAA Member}\\
+  {\normalsize\itshape
+   Mechanical and Aerospace Engineering, George Washington University, 800 22nd St NW, Washington, DC 20052}\\
+   }
+
+ % Data used by 'handcarry' option if invoked
+ \AIAApapernumber{YEAR-NUMBER}
+ \AIAAconference{Conference Name, Date, and Location}
+ \AIAAcopyright{\AIAAcopyrightD{YEAR}}
+
+ % Define commands to assure consistent treatment throughout document
+ \newcommand{\eqnref}[1]{(\ref{#1})}
+ \newcommand{\class}[1]{\texttt{#1}}
+ \newcommand{\package}[1]{\texttt{#1}}
+ \newcommand{\file}[1]{\texttt{#1}}
+ \newcommand{\BibTeX}{\textsc{Bib}\TeX}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Abstract
+\end{abstract}
+
+\section*{Nomenclature}
+
+\begin{tabbing}
+  XXX \= \kill% this line sets tab stop
+  $J$ \> Jacobian Matrix \\
+  $f$ \> Residual value vector \\
+  $x$ \> Variable value vector \\
+  $F$ \> Force, N \\
+  $m$ \> Mass, kg \\
+  $\Delta x$ \> Variable displacement vector \\
+  $\alpha$ \> Acceleration, m/s\textsuperscript{2} \\[5pt]
+  \textit{Subscript}\\
+  $i$ \> Variable number \\
+ \end{tabbing}
+
+\section{Introduction}
+
+This would be a good place to insert some text that make sense relative
+to the paper being written.
+Of course, for example purposes, the text is quite meaningless.
+
+\subsection{Background}
+
+This background section is here only to demonstrate \verb|\subsection|
+usage.
+And following this, the next section level will need to be demonstrated.
+
+\subsubsection{Detail}
+
+Here is a \verb|\subsubsection| that would normally come in pairs of two
+according to the requirements of an outline, but for the sake of
+demonstration, we are only showing a single \verb|\subsubsection|.
+
+\section{Model}
+
+We should probably include some math.
+Here we begin with Eq.~(\ref{e:function}) that demonstrates some math
+typesetting.
+\begin{equation}
+ \label{e:function}
+ \int_{0}^{r_{2}} F(r,\varphi) \, dr \, d\varphi =
+    \left[ \sigma r_{2}/(2\mu_{0}) \right] \cdot
+    \int_{0}^{\infty} \exp(-\rho|z_{j}-z_{i}|) \, \lambda^{-1} 
+\end{equation}
+Eq.~(\ref{e:function}) is grand.
+Some say it is due to Rebek.\cite{rebek:82bk}
+
+\section{Results}
+Talk about results
+\section{Conclusion}
+
+After much typing, the paper can now conclude.
+Four rocks were next to the channel.
+This caused a few standing waves during the rip that one could ride on
+the way in or jump on the way out.
+
+\section*{Appendix}
+
+An appendix, if needed, should appear before the acknowledgments.
+Use the 'starred' version of the \verb|\section| commands to avoid
+section numbering.
+Let's try a citation to myself~\cite{kulumani2015}.
+
+\section*{Acknowledgments}
+
+A place to recognize others.
+
+\bibliographystyle{aiaa} 
+\bibliography{library}
+
+\end{document}
